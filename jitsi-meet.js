@@ -6,7 +6,7 @@ let api;
 const options = {
   url: "./partecipanti.json", // config file
   imgPath: "assets/images/",
-  navTimeout: 15000,
+  navTimeout: 10000,
   modal: {
     before: "Troppo presto, l'evento inizierà Sabato alle ore 14:55.",
     live: "L'evento è iniziato. Entra nella stanza principale.",
@@ -154,10 +154,9 @@ bookmark.addEventListener("click", function(e) {
   if (nav.style.display === "none") {
     nav.style.display = "block";
 
-    // TODO: Close nav after timeout
-    // setInterval(() => {
-    //   nav.style.display = "none";
-    // }, navTimeout);
+    setTimeout(() => {
+      nav.style.display = "none";
+    }, options.navTimeout);
   } else {
     // reverse
     nav.style.display = "none";
