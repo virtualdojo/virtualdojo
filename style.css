@@ -63,9 +63,7 @@ body {
     right: 0;
     bottom: 0;
     left: 0;
-    /* right: 50%;
-    bottom: 50%; */
-    background-color: tomato;
+    background-color: #fff9c4;
   }
   .modal #close-modal {
     float: left;
