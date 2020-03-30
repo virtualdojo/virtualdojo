@@ -6,9 +6,9 @@ let api;
 const options = {
   url: "./partecipanti.json", // config file
   imgPath: "assets/images/",
-  navTimeout: 10000,
+  navTimeout: 15000,
   modal: {
-    before: "Troppo presto, l'evento inizierà Sabato alle ore 14:55.",
+    before: "Torna più tardi, l'evento inizierà Sabato alle ore 14:55.",
     live: "L'evento è iniziato. Entra nella stanza principale.",
     after: "L'evento è terminato."
   },
@@ -86,9 +86,14 @@ const createRooms = function() {
   options.jitsi.options.roomName = data.main;
   api = new JitsiMeetExternalAPI(options.jitsi.domain, options.jitsi.options);
 
-  // add link
+  // Nav `home` button
   setButtons(document.querySelector("#home"), data.main);
-  setButtons(document.querySelector("#support"), data.support);
+  // Nav `support` button
+  if (data.support) {
+    setButtons(document.querySelector("#support"), data.support);
+  } else {
+    document.querySelector("#support").style.display = "none";
+  }
 
   // add date
   document.querySelector("#date").innerHTML = data.date.event;
