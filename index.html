@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Virtual Dojo</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+    <div class="mobile">
+        <div class="text-container">
+            <p>Ciao!</p>
+            <p>Questa pagina può essere visualizzata solamente su uno schermo più grande di questo.</p>
+            <iframe src="https://giphy.com/embed/VbnUQpnihPSIgIXuZv" width="384" height="480" frameBorder="0"
+                class="giphy-embed" allowFullScreen></iframe>
+        </div>
+    </div>
+    <div class="desktop">
+        <div id="meet"></div>
+        <div class="bookmark"></div>
+
+        <div class="modal">
+            <div class="text-container">
+                Ciao!
+                <p id="timer"></p>
+                <img src="assets/icons/video.svg" height="75px" id="close-modal" class="close" data-url="main"
+                    data-close="modal" />
+            </div>
+        </div>
+
+        <div class="nav">
+            <div class="nav-header">
+                <img src="assets/icons/home.svg" width="30px" id="home" class="left" />
+                <img src="assets/icons/alert-octagon.svg" width="30px" id="support" class="left" />
+                <img src="assets/icons/x.svg" width="30px" class="close" data-close="nav" />
+            </div>
+            <div class="container">
+                <img src="assets/images/loghi.jpg" class="loghi" />
+                <h1>Virtual Dojo</h1>
+                <h2 id="date"></h2>
+                <div id="rooms"></div>
+            </div>
+
+            <script src='https://meet.jit.si/external_api.js'></script>
+            <script src='jitsi-meet.js'></script>
+        </div>
+</body>
+
+</html>
