@@ -61,6 +61,7 @@ const setDate = () => {
 
 const rooms = document.querySelector("#rooms"); // nav div
 const nav = document.querySelector(".nav");
+let timeout;
 
 // Event Listener Close Button
 const close = document.querySelectorAll(".close");
@@ -69,6 +70,8 @@ for (const item of close) {
     const parentClass = item.getAttribute("data-close");
     const parent = document.querySelector("." + parentClass);
     parent.style.display = "none";
+
+    clearTimeout(timeout);
 
     // Event: Modal closed, start call on the main room and build nav
     if (item.getAttribute("data-url") === "main") {
@@ -154,11 +157,12 @@ bookmark.addEventListener("click", function(e) {
   if (nav.style.display === "none") {
     nav.style.display = "block";
 
-    setTimeout(() => {
+    timeout = setTimeout(() => {
       nav.style.display = "none";
     }, options.navTimeout);
   } else {
     // reverse
     nav.style.display = "none";
+    clearTimeout(timeout);
   }
 });
