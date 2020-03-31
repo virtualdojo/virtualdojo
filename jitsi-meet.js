@@ -4,8 +4,7 @@
 let api;
 
 const options = {
-  url: "./partecipanti.json", // config file
-  imgPath: "assets/images/",
+  url: "./config.json", // config file
   navTimeout: 15000,
   modal: {
     before: "Torna più tardi, l'evento inizierà Sabato alle ore 14:55.",
@@ -110,7 +109,7 @@ const createRooms = function() {
             rgba(161, 162, 195, 0.25), 
             rgba(161, 162, 195, 0.25)
           ), url(` +
-      options.imgPath +
+      data.imgPath +
       item.img +
       `)`;
 
