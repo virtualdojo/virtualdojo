@@ -92,6 +92,10 @@ body {
     right: 30%;
     z-index: 2;
     cursor: pointer;
+    text-transform: uppercase;
+    writing-mode: vertical-rl;
+    color: #FFF;
+    line-height: 0;
   }
 
   .nav {
