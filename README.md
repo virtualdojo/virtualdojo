@@ -6,6 +6,8 @@ Angela and other mentors from CoderDojo Bologna, Padova and Turin wrote [some no
 
 We found extremely useful to build a static website where to host our online meeting. It runs [Jitsi Meet API](https://github.com/jitsi/jitsi-meet/blob/master/doc/api.md) which generates an iframe - the features are the same as the online client, but thanks to this approach we are able to use a custom webpage where are listed all the available rooms. For a user it just requires a click to change the room.
 
+You can find more details in Giulio's [post](https://medium.com/@gbonanome/virtualdojo-seconda-iterazione-4a9299bd4521) (in 🇮🇹). 
+
 You can customize the page as you want just changing some values in the configuration file. You can find more details ([customization](#customization)) and some an [example](https://github.com/peterampazzo/virtualdojo/blob/master/config.example.json).
 
 # Development
