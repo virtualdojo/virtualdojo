@@ -167,6 +167,7 @@ bookmark.addEventListener("click", function(e) {
 bookmark.addEventListener("animationiteration", ()=>{bookmark.classList.add("paused")});
   if (nav.style.display === "none") {
     nav.style.display = "block";
+		timeout = setTimeout(()=>{nav.style.display = "none"},options.navTimeout*3);
   } else {
     // reverse
     nav.style.display = "none";
