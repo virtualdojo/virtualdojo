@@ -5,7 +5,7 @@ let api;
 
 const options = {
   url: "./config.json", // config file
-  navTimeout: 15000,
+  navTimeout: 1500,
   modal: {
     before: "Torna più tardi, l'evento inizierà Sabato alle ore 14:55.",
     live: "L'evento è iniziato. Entra nella stanza principale.",
@@ -155,15 +155,19 @@ const addRoomClick = () => {
   }
 };
 
+/*************************
+	Hide "nav" if the mouse cursor is outside of it
+**************************/
+nav.addEventListener("mouseover",()=>{clearTimeout(timeout)});
+nav.addEventListener("mouseout",()=>{timeout = setTimeout(()=>{nav.style.display = "none"},options.navTimeout);});
+
 // Open Nav
 const bookmark = document.querySelector(".bookmark");
 bookmark.addEventListener("click", function(e) {
+bookmark.addEventListener("animationiteration", ()=>{bookmark.classList.add("paused")});
   if (nav.style.display === "none") {
     nav.style.display = "block";
-
-    timeout = setTimeout(() => {
-      nav.style.display = "none";
-    }, options.navTimeout);
+		timeout = setTimeout(()=>{nav.style.display = "none"},options.navTimeout*3);
   } else {
     // reverse
     nav.style.display = "none";
