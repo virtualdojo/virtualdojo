@@ -96,6 +96,9 @@ body {
     writing-mode: vertical-rl;
     color: #FFF;
     line-height: 0;
+    animation-name: bounce;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
   }
 
   .nav {
@@ -188,5 +191,19 @@ body {
   #home,
   #support {
   cursor: pointer;
+  }
+  
+  .paused{
+  animation-play-state: paused;
+  }
+  
+  @keyframes bounce{
+  0% {top: 0px;}
+    23% {top: 0px;}
+  27% {top: -10px;}
+    29% {top: 0px;}
+  32% {top: -2px;}
+    33% {top: 0px;}
+  100% {top: 0px;}
   }
 }

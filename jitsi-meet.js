@@ -164,6 +164,7 @@ nav.addEventListener("mouseout",()=>{timeout = setTimeout(()=>{nav.style.display
 // Open Nav
 const bookmark = document.querySelector(".bookmark");
 bookmark.addEventListener("click", function(e) {
+bookmark.addEventListener("animationiteration", ()=>{bookmark.classList.add("paused")});
   if (nav.style.display === "none") {
     nav.style.display = "block";
   } else {
