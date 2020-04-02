@@ -67,6 +67,7 @@ body {
   }
   .modal #close-modal {
     float: left;
+    cursor: pointer;
   }
 
   #meet {
@@ -90,6 +91,7 @@ body {
     top: 0px;
     right: 30%;
     z-index: 2;
+    cursor: pointer;
   }
 
   .nav {
@@ -126,6 +128,7 @@ body {
 
   .close {
     float: right;
+    cursor: pointer;
   }
 
   .loghi {
@@ -157,6 +160,7 @@ body {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
+    cursor: pointer;
   }
   .room-container {
     width: 100%;
