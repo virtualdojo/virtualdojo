@@ -103,7 +103,7 @@ body {
 
   .nav {
     position: absolute;
-    background-image: url("./assets/images/bananas.png");
+    background-image: url("./assets/images/background.jpg");
     width: 300px;
     display: none;
     top: 0;
