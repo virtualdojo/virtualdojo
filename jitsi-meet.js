@@ -106,8 +106,8 @@ const createRooms = function() {
     // TODO: can we add an overlay in another way?
     node.style.backgroundImage =
       `linear-gradient(
-            rgba(161, 162, 195, 0.25), 
-            rgba(161, 162, 195, 0.25)
+            rgba(161, 162, 195, 0.35), 
+            rgba(161, 162, 195, 0.35)
           ), url(` +
       data.imgPath +
       item.img +

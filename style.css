@@ -186,6 +186,8 @@ body {
     text-transform: uppercase;
     font-size: 50px;
     font-weight: 900;
+		-webkit-text-stroke: 1px #000;
+		text-stroke: 1px #000;
   }
   
   #home,
